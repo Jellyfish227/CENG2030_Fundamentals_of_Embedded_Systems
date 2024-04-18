@@ -1,0 +1,62 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard"
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/sketch/code.ino.cpp",
+    "Include": "Servo.h",
+    "Includepath": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src"
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/sketch/code.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/avr/Servo.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/mbed/Servo.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/megaavr/Servo.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/nrf52/Servo.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/renesas/Servo.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/sam/Servo.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/samd/Servo.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/stm32f4/Servo.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

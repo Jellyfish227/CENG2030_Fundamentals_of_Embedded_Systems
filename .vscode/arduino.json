@@ -1,0 +1,7 @@
+{
+    "sketch": "code/code.ino",
+    "output": "build",
+    "board": "arduino:avr:uno",
+    "programmer": "avrisp",
+    "port": "/dev/tty.usbserial-1410"
+}

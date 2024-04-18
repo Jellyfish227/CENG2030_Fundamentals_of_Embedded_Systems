@@ -1,0 +1,17 @@
+const int sensorPin = A0;   // select the input pin for the potentiometer
+const int THRESHOLD = 800;
+
+int signal = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  signal = analogRead(sensorPin);
+  Serial.print("Signal:");
+  Serial.println(signal);
+  delay(100);
+}
