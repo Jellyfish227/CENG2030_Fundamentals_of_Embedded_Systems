@@ -1,46 +1,44 @@
-#include <Servo.h>
-Servo myservo;
+const int sensorPin = A0;   // select the input pin for the potentiometer
+const int ledPin = 13;      // select the pin for the LED
+const int THRESHOLD = 800;
 
-const int IRLEFT = A4;
-const int IRRIGHT = A5;
-const int SERVOPIN = 11;
-const int DEADBAND = 20;
-
-int pos = 0;
-int leftLevel = 0;
-int rightLevel = 0;
-bool isTurnRight = false;
-bool isTurnLeft = false;
+bool pulseCounted = false;
+int pulseCount = 0;
+int rawPulseVal = 0;
+int pulseRate = 0;
+int sensorValue = 0;
+long int time;  // variable to store the value coming from the sensor
 
 void setup() {
   // put your setup code here, to run once:
-  myservo.attach(SERVOPIN);
+  pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  leftLevel = analogRead(IRLEFT);
-  Serial.print("Left:");
-  Serial.println(leftLevel);
-  rightLevel = analogRead(IRRIGHT);
-  Serial.print("Right:");
-  Serial.println(rightLevel);
-
-  if (leftLevel > rightLevel) {
-    if (leftLevel - rightLevel > DEADBAND){
-      pos--;
-      if (pos < 0) 
-        pos = 0;
-      myservo.write(pos);
+  time = millis();
+  sensorValue = analogRead(sensorPin);
+  
+  if (sensorValue >= 700){
+    digitalWrite(ledPin, HIGH);
+    if(!pulseCounted){
+      pulseCount++;
+      pulseCounted = true;
     }
-  } else if (rightLevel > leftLevel) {
-    if (rightLevel - leftLevel > DEADBAND){
-      pos++;
-      if (pos > 180)
-        pos = 180;
-      myservo.write(pos);
-    }
+    
+  } else {
+    digitalWrite(ledPin, LOW);
+    pulseCounted = false;
   }
-  delay(10);
+
+  pulseRate = pulseCount * 60000/time;
+
+  Serial.print("SignalLevel:");
+  Serial.print(sensorValue);
+  Serial.print(",");
+  Serial.print("PulseRate:");
+  Serial.println(pulseRate);
+  delay(20);
+  
 }
