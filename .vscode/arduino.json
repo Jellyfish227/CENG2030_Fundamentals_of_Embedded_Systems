@@ -1,0 +1,6 @@
+{
+    "sketch": "ceng2030_pro2/ceng2030_pro2.ino",
+    "board": "arduino:avr:uno",
+    "port": "/dev/tty.usbserial-1410",
+    "programmer": "avrisp"
+}
