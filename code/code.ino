@@ -13,6 +13,7 @@ const int TPR = A2;
 const int BPR = A3;
 const int YZSERVO = 11;
 const int XYSERVO = 10;
+const int LED = 9;
 const int DEADBAND = 20;
 
 //declaration of 
@@ -29,6 +30,7 @@ void setup() {
   yzPlaneServo.attach(YZSERVO);
   pinMode(ECHO, INPUT);
   pinMode(TRIG, OUTPUT);
+  pinMode(LED, OUTPUT);
   xyPlaneServo.write(0);
   yzPlaneServo.write(0);
 }
@@ -68,8 +70,9 @@ void loop() {
   Serial.print("Bottom:");
   Serial.println(bottomLevel);
 
-  if (cm > 340)
+  if (cm > 30)
   {
+    digitalWrite(LED, LOW);
     if (leftLevel > rightLevel + DEADBAND)
     {
       posXY--;
@@ -91,14 +94,16 @@ void loop() {
       if (posYZ < 0)
         posYZ = 0;
     }
-    else if (topLevel > bottomLevel + DEADBAND)
+    else if (bottomLevel > topLevel + DEADBAND)
     {
       posYZ++;
       if (posYZ > 180)
         posYZ = 180;
     }
     yzPlaneServo.write(posYZ);
+  } else {
+    digitalWrite(LED, HIGH);
   }
 
-  delay(250);
+  delay(50);
 }
