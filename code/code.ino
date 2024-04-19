@@ -7,10 +7,10 @@ Servo yzPlaneServo;
 //declaration of pins
 const int ECHO = 12;   // select the input pin for the ultrasonic echo pin
 const int TRIG = 13;   // select the input pin for the ultrasonic trig pin
-const int LPR = A0;
-const int RPR = A1;
-const int TPR = A2;
-const int BPR = A3;
+const int LIR = A0;
+const int RIR = A1;
+const int TIR = A2;
+const int BIR = A3;
 const int YZSERVO = 11;
 const int XYSERVO = 10;
 const int LED = 9;
@@ -57,10 +57,10 @@ void loop() {
   Serial.println("cm");
 
   //light signal input
-  leftLevel = analogRead(LPR);
-  rightLevel = analogRead(RPR);
-  topLevel = analogRead(TPR);
-  bottomLevel = analogRead(BPR);
+  leftLevel = analogRead(LIR);
+  rightLevel = analogRead(RIR);
+  topLevel = analogRead(TIR);
+  bottomLevel = analogRead(BIR);
   Serial.print("Left:");
   Serial.println(leftLevel);
   Serial.print("Right:");
