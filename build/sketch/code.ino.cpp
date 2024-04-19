@@ -6,15 +6,19 @@
 Servo xyPlaneServo;
 Servo yzPlaneServo;
 
-//declaration of pins
+/*
+ * For demo, use IR sensor for better effect, use photoresistor in actual case
+ */
+// declaration of pins
 const int ECHO = 12;   // select the input pin for the ultrasonic echo pin
 const int TRIG = 13;   // select the input pin for the ultrasonic trig pin
-const int LIR = A0;
-const int RIR = A1;
-const int TIR = A2;
-const int BIR = A3;
+const int LIR = A0;    // Left IR
+const int RIR = A1;    // Right IR
+const int TIR = A2;    // Top IR
+const int BIR = A3;    // Bottom IR
 const int YZSERVO = 11;
 const int XYSERVO = 10;
+const int LED = 9;
 const int DEADBAND = 20;
 
 //declaration of 
@@ -24,11 +28,11 @@ int posYZ = 0;
 int leftLevel, rightLevel, topLevel, bottomLevel;
 
 
-#line 25 "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/code/code.ino"
+#line 29 "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/code/code.ino"
 void setup();
-#line 36 "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/code/code.ino"
+#line 41 "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/code/code.ino"
 void loop();
-#line 25 "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/code/code.ino"
+#line 29 "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/code/code.ino"
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
@@ -36,6 +40,7 @@ void setup() {
   yzPlaneServo.attach(YZSERVO);
   pinMode(ECHO, INPUT);
   pinMode(TRIG, OUTPUT);
+  pinMode(LED, OUTPUT);
   xyPlaneServo.write(0);
   yzPlaneServo.write(0);
 }
@@ -75,8 +80,10 @@ void loop() {
   Serial.print("Bottom:");
   Serial.println(bottomLevel);
 
-  if (cm > 340)
+  // 30cm is for demo use, it should be actual length in deployment
+  if (cm > 30)
   {
+    digitalWrite(LED, LOW);
     if (leftLevel > rightLevel + DEADBAND)
     {
       posXY--;
@@ -98,14 +105,17 @@ void loop() {
       if (posYZ < 0)
         posYZ = 0;
     }
-    else if (topLevel > bottomLevel + DEADBAND)
+    else if (bottomLevel > topLevel + DEADBAND)
     {
       posYZ++;
       if (posYZ > 180)
         posYZ = 180;
     }
     yzPlaneServo.write(posYZ);
+  } else {
+    digitalWrite(LED, HIGH);
   }
 
-  delay(250);
+  delay(50);
 }
+

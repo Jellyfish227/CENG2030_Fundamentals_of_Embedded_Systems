@@ -55,11 +55,11 @@
    "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
    "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
    "-I/Users/jellyfish/Documents/Arduino/libraries/Servo/src",
-   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/stm32f4/Servo.cpp",
+   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/avr/Servo.cpp",
    "-o",
-   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/stm32f4/Servo.cpp.o"
+   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/avr/Servo.cpp.o"
   ],
-  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/stm32f4/Servo.cpp"
+  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/avr/Servo.cpp"
  },
  {
   "directory": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems",
@@ -86,11 +86,11 @@
    "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
    "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
    "-I/Users/jellyfish/Documents/Arduino/libraries/Servo/src",
-   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/megaavr/Servo.cpp",
+   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/stm32f4/Servo.cpp",
    "-o",
-   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/megaavr/Servo.cpp.o"
+   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/stm32f4/Servo.cpp.o"
   ],
-  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/megaavr/Servo.cpp"
+  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/stm32f4/Servo.cpp"
  },
  {
   "directory": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems",
@@ -148,73 +148,11 @@
    "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
    "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
    "-I/Users/jellyfish/Documents/Arduino/libraries/Servo/src",
-   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/nrf52/Servo.cpp",
-   "-o",
-   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/nrf52/Servo.cpp.o"
-  ],
-  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/nrf52/Servo.cpp"
- },
- {
-  "directory": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems",
-  "arguments": [
-   "/Users/jellyfish/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
-   "-c",
-   "-g",
-   "-Os",
-   "-w",
-   "-std=gnu++11",
-   "-fpermissive",
-   "-fno-exceptions",
-   "-ffunction-sections",
-   "-fdata-sections",
-   "-fno-threadsafe-statics",
-   "-Wno-error=narrowing",
-   "-MMD",
-   "-flto",
-   "-mmcu=atmega328p",
-   "-DF_CPU=16000000L",
-   "-DARDUINO=10607",
-   "-DARDUINO_AVR_UNO",
-   "-DARDUINO_ARCH_AVR",
-   "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
-   "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
-   "-I/Users/jellyfish/Documents/Arduino/libraries/Servo/src",
    "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/samd/Servo.cpp",
    "-o",
    "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/samd/Servo.cpp.o"
   ],
   "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/samd/Servo.cpp"
- },
- {
-  "directory": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems",
-  "arguments": [
-   "/Users/jellyfish/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
-   "-c",
-   "-g",
-   "-Os",
-   "-w",
-   "-std=gnu++11",
-   "-fpermissive",
-   "-fno-exceptions",
-   "-ffunction-sections",
-   "-fdata-sections",
-   "-fno-threadsafe-statics",
-   "-Wno-error=narrowing",
-   "-MMD",
-   "-flto",
-   "-mmcu=atmega328p",
-   "-DF_CPU=16000000L",
-   "-DARDUINO=10607",
-   "-DARDUINO_AVR_UNO",
-   "-DARDUINO_ARCH_AVR",
-   "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
-   "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
-   "-I/Users/jellyfish/Documents/Arduino/libraries/Servo/src",
-   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/renesas/Servo.cpp",
-   "-o",
-   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/renesas/Servo.cpp.o"
-  ],
-  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/renesas/Servo.cpp"
  },
  {
   "directory": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems",
@@ -272,10 +210,72 @@
    "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
    "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
    "-I/Users/jellyfish/Documents/Arduino/libraries/Servo/src",
-   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/avr/Servo.cpp",
+   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/renesas/Servo.cpp",
    "-o",
-   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/avr/Servo.cpp.o"
+   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/renesas/Servo.cpp.o"
   ],
-  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/avr/Servo.cpp"
+  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/renesas/Servo.cpp"
+ },
+ {
+  "directory": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems",
+  "arguments": [
+   "/Users/jellyfish/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
+   "-c",
+   "-g",
+   "-Os",
+   "-w",
+   "-std=gnu++11",
+   "-fpermissive",
+   "-fno-exceptions",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-fno-threadsafe-statics",
+   "-Wno-error=narrowing",
+   "-MMD",
+   "-flto",
+   "-mmcu=atmega328p",
+   "-DF_CPU=16000000L",
+   "-DARDUINO=10607",
+   "-DARDUINO_AVR_UNO",
+   "-DARDUINO_ARCH_AVR",
+   "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
+   "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
+   "-I/Users/jellyfish/Documents/Arduino/libraries/Servo/src",
+   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/megaavr/Servo.cpp",
+   "-o",
+   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/megaavr/Servo.cpp.o"
+  ],
+  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/megaavr/Servo.cpp"
+ },
+ {
+  "directory": "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems",
+  "arguments": [
+   "/Users/jellyfish/Library/Arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-g++",
+   "-c",
+   "-g",
+   "-Os",
+   "-w",
+   "-std=gnu++11",
+   "-fpermissive",
+   "-fno-exceptions",
+   "-ffunction-sections",
+   "-fdata-sections",
+   "-fno-threadsafe-statics",
+   "-Wno-error=narrowing",
+   "-MMD",
+   "-flto",
+   "-mmcu=atmega328p",
+   "-DF_CPU=16000000L",
+   "-DARDUINO=10607",
+   "-DARDUINO_AVR_UNO",
+   "-DARDUINO_ARCH_AVR",
+   "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
+   "-I/Users/jellyfish/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
+   "-I/Users/jellyfish/Documents/Arduino/libraries/Servo/src",
+   "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/nrf52/Servo.cpp",
+   "-o",
+   "/Users/jellyfish/Documents/CUHK/Year_2/Spring/CENG2030_Fundamentals_of_Embedded_Systems/build/libraries/Servo/nrf52/Servo.cpp.o"
+  ],
+  "file": "/Users/jellyfish/Documents/Arduino/libraries/Servo/src/nrf52/Servo.cpp"
  }
 ]

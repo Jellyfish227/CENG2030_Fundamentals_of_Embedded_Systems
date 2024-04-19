@@ -5,15 +5,19 @@
 Servo xyPlaneServo;
 Servo yzPlaneServo;
 
-//declaration of pins
+/*
+ * For demo, use IR sensor for better effect, use photoresistor in actual case
+ */
+// declaration of pins
 const int ECHO = 12; // select the input pin for the ultrasonic echo pin
 const int TRIG = 13; // select the input pin for the ultrasonic trig pin
-const int LIR = A0;
-const int RIR = A1;
-const int TIR = A2;
-const int BIR = A3;
+const int LIR = A0; // Left IR
+const int RIR = A1; // Right IR
+const int TIR = A2; // Top IR
+const int BIR = A3; // Bottom IR
 const int YZSERVO = 11;
 const int XYSERVO = 10;
+const int LED = 9;
 const int DEADBAND = 20;
 
 //declaration of 
@@ -30,6 +34,7 @@ void setup() {
   yzPlaneServo.attach(YZSERVO);
   pinMode(ECHO, 0x0);
   pinMode(TRIG, 0x1);
+  pinMode(LED, 0x1);
   xyPlaneServo.write(0);
   yzPlaneServo.write(0);
 }
@@ -69,8 +74,10 @@ void loop() {
   Serial.print("Bottom:");
   Serial.println(bottomLevel);
 
-  if (cm > 340)
+  // 30cm is for demo use, it should be actual length in deployment
+  if (cm > 30)
   {
+    digitalWrite(LED, 0x0);
     if (leftLevel > rightLevel + DEADBAND)
     {
       posXY--;
@@ -92,14 +99,16 @@ void loop() {
       if (posYZ < 0)
         posYZ = 0;
     }
-    else if (topLevel > bottomLevel + DEADBAND)
+    else if (bottomLevel > topLevel + DEADBAND)
     {
       posYZ++;
       if (posYZ > 180)
         posYZ = 180;
     }
     yzPlaneServo.write(posYZ);
+  } else {
+    digitalWrite(LED, 0x1);
   }
 
-  delay(250);
+  delay(50);
 }
